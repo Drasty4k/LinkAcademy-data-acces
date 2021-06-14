@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ws = new WebSocket('ws://localhost:40510')
+        ws.onopen = function() {
+            // se intampla la deschiderea conexiunii
+            console.log('Conexiunea a fost deschisa')
+        }
+
+        ws.onmessage = function(event) {
+            console.log('Un nou eveniment a fost primit' + event)
+        }
+    </script>
+</body>
+</html>
